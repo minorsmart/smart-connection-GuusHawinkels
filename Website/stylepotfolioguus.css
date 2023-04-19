@@ -3,30 +3,30 @@ body {
     background-color: #f8f8f8;
    }
    header {
-   background-color: #015d47;
-   color: white;
-   padding: 10px;
-   text-align: center;
-   }nav {
-    background-color: #019691;
-   padding: 10px;
-   }nav ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   display: flex;
-   justify-content: space-around;
-   }nav li {
-    margin: 0;
-   }nav a {
-    color: #333;
-    text-decoration: none;
-   font-weight: bold;
-   padding: 10px;
-    border-radius: 5px;
-   }nav a:hover {
-    background-color: #333;
+    background-color: #325551;
     color: white;
+    padding: 10px;
+    text-align: center;
+    }nav {
+     background-color: #019691;
+    padding: 10px;
+    }nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    }nav li {
+     margin: 0;
+    }nav a {
+     color: #333;
+     text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+     border-radius: 5px;
+    }nav a:hover {
+     background-color: #333;
+     color: white;
    }main {
     max-width: 800px;
     margin: 0 auto;
