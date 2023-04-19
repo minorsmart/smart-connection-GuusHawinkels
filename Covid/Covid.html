@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Covid-19</title>
+  </head>
+  <body>
+    <h1>
+        <style>
+            body {
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+                font-size: 0.8em;
+                color: #ffffff;
+                text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: linear-gradient(to right top, #ffb1b1, #ec5555, #ff0000, #cc5e5e, #fac9c9);
+            }
+            h1 {
+               
+                font-size: 2.2em;
+                text-align: start;
+                color: #fff;
+                font-size: 4em;
+            }
+            p 
+            {
+             padding: 30px;
+             margin: 50px;
+            }
+            </style>
+        Covid-19 numbers in the 
+        <div id="land"></div>
+      </h1>
+      <p>
+        Datum:
+        <div id="datum"></div>
+     </p>
+        Totaal aantal doden:
+       <div id="Totaal aantal doden"></div>
+    <p>
+        Totaal aantal Niewe doden:
+        <div id="Nieuwe aantal doden"></div>
+      </p>
+       
+    
+
+    <script lang="text/javascript">
+        fetch('https://api.covid19api.com/summary')  
+          .then(function(resp) { return resp.json() }) // Convert data to json
+          .then(function(data) {
+          console.log(data); 
+          console.log(data.Countries[125].Country);
+            console.log(data.Countries[125].TotalDeaths);
+            console.log(data.Countries[125].NewDeaths);
+            document.getElementById("land").innerHTML = (data.Countries[125].Country);
+            document.getElementById("datum").innerHTML = (data.Countries[125].Date);
+            document.getElementById("Totaal aantal doden").innerHTML = (data.Countries[125].TotalDeaths);
+            document.getElementById("Nieuwe aantal doden").innerHTML = (data.Countries[125].NewDeaths);
+
+          })
+          .catch(function() {  // catch any errors
+          });
+      </script>
+
+  </body>
+</html>
